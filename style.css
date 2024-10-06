@@ -1,0 +1,843 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root{
+    --bgcolor: #fff;
+    --primary-color: #3a043b;
+    --secondary-color: #5E2D79;
+    --secondBgColor: #f9eeff;
+}
+
+body{
+    background-color: var(--secondBgColor);
+}
+.btn{
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0px;
+    border: none;
+    background: linear-gradient(to bottom right,#3063FF, #C325D1, #A92FFF);
+
+    color: #fff;
+    font-weight: 550;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 2px 3px 5px rgb(161, 131, 157);
+}
+.btn2{
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0px;
+    border: none;
+    background-color: var(--bgcolor);
+    color: var(--primary-color);
+    font-weight: 550;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    box-shadow: 1px 2px 5px rgb(161, 131, 157);
+}
+.btn2:hover{
+    box-shadow: none;
+    border-top-right-radius: 0px;
+}
+.btn:hover{
+    box-shadow: none;
+    border-top-left-radius: 0px;
+    background-color: var(--secondary-color);
+}
+section{
+    padding: 3rem;
+    min-height: 100vh;
+}
+span{
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bgcolor);
+}
+h2{
+    font-size: 3.5rem;
+}
+h1{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+.txt{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.heading{
+    display: inline-block;
+}
+.heading::after{
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom:-2px;
+    width: 10%;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-2px;
+    width: 40%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+strong{
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+    color: transparent; /* Make the text itself transparent */
+    /* -webkit-background-clip: text; Clip the background to the text */
+    background-clip: text; /* Standard property for compatibility */
+}
+.txtdes{
+    font-size: 1rem;
+}
+
+.punchtext{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 4px var(--secondary-color);
+}
+/* navBar */
+
+nav{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+    padding:0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bgcolor);
+    box-shadow: 0px 2px 8px rgba(88, 7, 64, 0.158);
+}
+ul{
+    position: static;
+}
+ul li{
+    list-style: none;
+    float: left;
+    border-radius: 1rem;
+    margin: 0 0.3rem;
+    padding: 0.5rem 0;
+}
+ul li a{
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color:var(--secondary-color);
+    font-size: 1rem;
+    
+    transition: 0.5s ease;
+}
+ul li:hover{
+    color: var(--primary-color);
+    background-color: rgb(241, 241, 241);
+}
+.logo{
+    position: relative;
+    width: 100px;
+
+}
+#close{
+    font-size: 0.9rem;
+    display: none;
+    color:rgb(146, 25, 25);
+    font-weight: 600;
+}
+.logo img{
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+    background-color: var(--bgcolor);
+    height: 80px;
+    top: -1.7rem;
+    width: auto;
+    
+}
+.active{
+    font-weight: 600;
+    color:var(--primary-color)
+}
+
+.menu{
+    display: none;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+}
+.menu:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+
+/* hero section */
+
+.hero{
+    background: url('/pomerian.jpg');
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    color: var(--bgcolor);
+}
+.heroInfo{
+    margin-top:3rem;
+    height: 100%;
+}
+.heroText{
+    max-width: 500px;
+    padding:0.5rem ;
+    background-color: rgba(84, 3, 87, 0.233);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    }
+.heroBtn{
+    padding: 1.5rem 0;
+}
+
+/*About Us*/
+
+.aboutHeading{
+    text-align: center;
+    position: relative;
+}
+.aboutContent{
+    display: flex;
+
+    gap: 10px;
+    width:100%;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+.aboutContent .img{
+    width: 550px;
+    flex: 1;
+    object-fit: contain;
+}
+.img img{
+    width:100%;
+    height: auto;
+}
+.aboutContent .aboutText{
+    flex: 1;
+    width: 50%;
+    padding: 0.5rem 0.25rem;
+}
+
+/*quote*/
+
+.quote{
+    padding: 3rem;
+}
+.quote .quoteBox{
+    
+    border-radius: 2.5rem;
+    background:linear-gradient(to bottom right,#3063FF, #C325D1, #A92FFF);
+    padding: 1.5rem 2rem;
+}
+.quoteBox h1{
+    text-align: center;
+    color: var(--bgcolor);
+    font-size: 5.5rem;
+}
+.quoteBox article{
+    padding: 0.5rem 1rem;
+    color: var(--bgcolor);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+.quoteBox aside{
+    color: var(--bgcolor);
+    text-align: right;
+    padding: 0.25rem .5rem;
+    border-right: 3px solid var(--bgcolor)
+}
+
+
+/*marketPlace*/
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 2rem;
+}
+.cardContainer .card{
+    width: 280px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border-radius: 0.75rem;
+    background-color: var(--bgcolor);
+    overflow: hidden;
+    box-shadow: 2px 3px 8px rgba(143, 14, 104, 0.308);
+}
+.card img{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+
+}
+.card .cardTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem 0;
+}
+.cardTitle p{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+.card h3{
+    padding: 0.25rem 0.75rem;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+.cardTitle .status{
+    background-color: rgb(72, 221, 72);
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+    font-weight: 600;
+    color: green;
+}
+.card .cardDescription{
+    padding: 0.25rem 0.75rem;
+
+}
+.card .cardFooter{
+    display: flex;
+    justify-content: end;
+    padding: 0.25rem 0.75rem 0.8rem;
+}
+
+/* Why Pomerians */
+.wrapper{
+    padding: 1.5rem 0;
+}
+.leftContent{
+    margin: 1rem 0 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    padding: .75rem;
+    border-radius: 5rem;
+    background-color: var(--bgcolor);
+    box-shadow: 2px 3px 6px rgba(143, 14, 104, 0.308);
+}
+.rightContent{
+    display: flex;
+    justify-content: end;
+}
+.whyPomImg{
+    margin-left: 0.5rem;
+    width: 30%;
+    height: auto;
+
+}
+.whyPomArticle{
+    border-left: 3px solid var(--primary-color);
+    padding: 0.25rem .5rem;
+}
+.whyPomArticle b{
+    font-weight: 600;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+.whyPomArticle p{
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/*footer*/
+footer{
+    height: 580px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.footer{
+    min-height: 800px;
+    border-radius: 60%/30%;
+    background-color: var(--bgcolor);
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(143, 14, 104, 0.308);
+    padding: 130px 3rem;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    z-index: -1;
+    text-align: center;
+    
+}
+.footerLeft, .footerRight{
+    min-width: 250px;
+    flex: 1;
+}
+.footerMid{
+    width:max-content;
+    text-align: left;
+}
+.footerLeft img{
+    width: 180px;
+    height: auto;
+}
+.footer .headText{
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: relative;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.footer .headText::after{
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom:-4px;
+    width: 10%;
+    height: 4.5px;
+    border-radius: 5px;
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+
+}
+.footer .headText::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-4px;
+    width: 40%;
+    height: 4.5px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+.footerLeft .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.25rem 0;
+}
+.social i{
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color:var(--bgcolor);
+    background-color: var(--primary-color);
+}
+.footer .footerText{
+    padding-top: 5px;
+    font-size: 1rem;
+    
+    color: var(--primary-color);
+}
+.footer .footerText a{
+    text-decoration: none;
+    transition: .5s;
+}
+.footerText a:hover{
+    font-weight: 600;
+}
+.footerRight input, textarea{
+    width: 100%;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 1.2rem;
+    background-color: var(--secondBgColor);
+    border: none;
+    margin-top: 8px;
+}
+
+.submitBtn{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+/* media queries */
+@media (max-width: 986px){
+    .cardContainer{
+        gap: 12px;
+    }
+    .card .cardTitle{
+        padding: 0.5rem 0.65rem 0;
+    }
+    .cardTitle p{
+        font-size: 1.1rem;
+    }
+    .card h3{
+        padding: 0.25rem 0.65rem;
+        font-size: 2.2rem;
+    }
+    .cardTitle .status{
+        font-size: 0.8rem;
+        border-radius: 1rem;
+        padding: 0.2rem 0.75rem;
+    }
+    .card .cardDescription{
+        padding: 0.25rem 0.75rem;
+    
+    }
+    .card .cardFooter{
+        display: flex;
+        justify-content: end;
+        padding: 0.25rem 0.75rem 0.8rem;
+    }
+    
+}
+
+@media (max-width: 850px){
+    .heading::after{
+        height: 4px;
+    }
+    .heading::before{
+        height: 4px;
+    }
+    
+    .heroInfo{
+        margin-top:2rem;
+    }
+
+    .txt{
+        font-size: 0.9rem;
+    }
+    .heroInfo{
+        margin-top:2rem;
+    }
+    .heroText{
+        background-color: rgba(84, 3, 87, 0.233);
+        border-radius: 5px;
+        font-size: 1.1rem;
+        }
+    .heroBtn{
+        padding: 1.3rem 0;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .aboutContent{
+        flex-wrap: wrap-reverse;
+    }
+    .aboutContent .aboutText{
+        min-width: 100%;
+        flex-shrink: 0;
+    }
+    
+    .quoteBox h1{
+        font-size: 5rem;
+    }
+    .footerLeft{
+        min-width:100%;
+        flex-shrink:0;
+        margin-bottom: 15px;
+        height: max-content;
+    }
+    .footer{
+        gap: 0px;
+        padding: 3rem;
+        height: auto;
+        padding-bottom: 300px;
+    }
+    .footerMid, .footerRight{
+        min-width: none;
+        text-align: left;
+        width:50%;
+        flex: 1;
+    }
+    footer{
+        height: 850px;
+    }
+
+}
+
+@media (max-width: 778px){
+    .hero{
+        background: url('/pomerian1.jpg');
+        background-size: cover;
+        align-items: center;
+    }
+    .heroInfo{
+        margin-top:0.5rem;
+    }
+    .txt{
+        font-size: 0.8rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    ul li{
+        margin: 0 0.2rem;
+    }
+    ul li a{
+        padding: 0.25rem 0.65rem;
+        font-size: 0.9rem;
+    }
+    .btn{
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    .quoteBox article{
+        padding: 0.5rem 0.75rem;
+        font-size: 1.5rem;
+    }
+    .leftContent{
+        width:100%;
+    }
+    /* .whyPomArticle{
+        border-left: 3px solid var(--primary-color);
+        padding: 0.25rem .5rem;
+    } */
+    .whyPomArticle b{
+        font-size: 0.9rem;
+    }
+    .whyPomArticle p{
+        font-size: 0.8rem;
+    }
+    
+} 
+@media (max-width: 664px){
+    section, .quote{
+        padding: 2rem;
+    }
+    footer{
+        height: 710px;
+    }
+    .footer{
+        border-radius: 60%/20%;
+        padding: 2rem 2rem 300px;
+    }
+    #close{
+        display: block;
+    }
+    ul li{
+        clear: both;
+        width: 100%;
+        margin:0rem;
+    }
+    ul li a{
+        width: 100%;
+    }
+    ul{
+        position: absolute;
+        width: 52%;
+        background-color: white;
+        text-align: center;
+        left:50%;
+        top: 0px;
+        z-index: 999;
+        padding: 0.5rem;
+        overflow: hidden;
+        border-radius: 1rem;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        transform: translate(-50%, -100%);
+        transition: 0.5s ease;
+        box-shadow: 0px 3px 8px rgba(88, 7, 64, 0.158);;
+    }
+    .heroInfo{
+        margin-top:0;
+    }
+    .txt{
+        font-size: 0.7rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .heroText{
+        font-size: 0.9rem;
+    }
+    .menu{
+        display: block;
+    }
+    .logo img{
+        padding: 0.25rem;
+        border-radius: 0.75rem;
+        height: 60px;
+        top: -.5rem;
+        width: auto;
+        
+    }
+    .quoteBox{
+        padding: 1rem 1.2rem;
+    }
+    .quoteBox h1{
+        font-size: 4rem;
+    }
+    .quoteBox article{
+        
+        font-size: 1.3rem;
+    }
+    .quoteBox aside{
+        font-size: 0.8rem;
+    }
+    .whyPomImg{
+        margin-left: 0.5rem;
+        width: 18%;
+    
+    }
+    .whyPomArticle b{
+        font-size: 0.8rem;
+    }
+    .whyPomArticle p{
+        font-size: 0.7rem;
+    }
+    .footerLeft img{
+        width: 140px;
+        height: auto;
+    }
+    .footer .headText{
+        font-size: 1.2rem;
+    }
+    .footerLeft .social{
+        gap: 5px;
+        padding: 0.25rem 0;
+    }
+    .social i{
+        padding: 5px;
+        font-size: 2rem;
+    }
+    .footerRight input, textarea{
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    .cardContainer{
+        gap: 10px;
+    }
+    .cardTitle p{
+        font-size: 1rem;
+    }
+    .card h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 470px){
+    .cardTitle .status{
+        font-size: 0.65rem;
+    }
+    .cardTitle p{
+        font-size: 0.9rem;
+    }
+    .card h3{
+        font-size: 1.3rem;
+    }
+    footer{
+        height: 880px;
+    }
+    .footer{
+        height: auto;
+        border-radius: 60%/10%;
+        padding: 1rem 1rem 200px;
+    }
+    .footerMid ,.footerRight{
+        min-width:100%;
+        flex-shrink:0;
+        margin-bottom: 15px;
+        height: max-content;
+    }
+    .social i{
+        padding: 5px;
+        font-size: 2rem;
+    }
+    .footerRight input, textarea{
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 425px){
+    section, .quote{
+        padding: 1rem;
+    }
+    .hero{
+        background: url('/pomerian-potrit.jpg');
+        background-size: cover;
+        align-items: start;
+        padding-top:3.5rem;
+    }
+    .txt{
+        font-size: 0.7rem;
+    }
+    h2{
+        font-size: 1.6rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .heroText{
+        max-width:300px; 
+    }
+    .menu{
+        font-size: .75rem;
+    }
+    .btn{
+        font-weight: 500;
+        font-size: .6rem;
+    }
+    ul{
+        width: 70%;
+    }
+    .logo img{
+        height: 50px;
+    }
+    nav{
+        padding: 0.7rem 1rem;
+    }
+    .logo{
+        width: 50px;
+    }
+    .wrapper{
+        padding: 0.8rem 0.2rem;
+    }
+    .leftContent{
+        margin: 0.7rem 0 0.25rem;
+        padding: .5rem;
+        border-radius: 5rem;
+    }
+    .whyPomImg{
+        margin-left: 0.2rem;
+    
+    }
+    .whyPomArticle{
+        border-left: 2px solid var(--primary-color);
+        padding: 0.2rem .35rem;
+    }
+    .whyPomArticle b{
+        padding-bottom: 5px;
+        font-size: 0.7rem;
+    }
+    .whyPomArticle p{
+        font-size: 0.65rem;
+    }
+}
