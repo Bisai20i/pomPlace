@@ -195,7 +195,7 @@ ul li:hover{
 /* hero section */
 
 .hero{
-    background: url('/pomerian.jpg');
+    background: url('./pomerian.jpg');
     background-size:cover;
     display: flex;
     align-items: center;
@@ -578,7 +578,7 @@ footer{
 
 @media (max-width: 778px){
     .hero{
-        background: url('/pomerian1.jpg');
+        background: url('./pomerian1.jpg');
         background-size: cover;
         align-items: center;
     }
@@ -781,7 +781,7 @@ footer{
         padding: 1rem;
     }
     .hero{
-        background: url('/pomerian-potrit.jpg');
+        background: url('./pomerian-potrit.jpg');
         background-size: cover;
         align-items: start;
         padding-top:3.5rem;
