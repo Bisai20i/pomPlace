@@ -54,7 +54,7 @@ body{
 }
 section{
     padding: 3rem;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 span{
     background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
@@ -199,6 +199,7 @@ ul li:hover{
     background-size:cover;
     display: flex;
     align-items: center;
+    height: 90vh;
     color: var(--bgcolor);
 }
 .heroInfo{
@@ -388,18 +389,22 @@ footer{
     box-shadow: 0px 0px 8px rgba(143, 14, 104, 0.308);
     padding: 130px 3rem;
     display: flex;
-    gap: 5px;
+    gap: 25px;
     flex-wrap: wrap;
-    z-index: -1;
     text-align: center;
     
 }
-.footerLeft, .footerRight{
+.footerLeft{
     min-width: 250px;
-    flex: 1;
+    flex-shrink: 1;
 }
+
 .footerMid{
     width:max-content;
+    text-align: left;
+}
+.footerRight{
+    flex:1;
     text-align: left;
 }
 .footerLeft img{
@@ -518,14 +523,11 @@ footer{
     }
     
     .heroInfo{
-        margin-top:2rem;
+        margin-top:3rem;
     }
 
     .txt{
         font-size: 0.9rem;
-    }
-    .heroInfo{
-        margin-top:2rem;
     }
     .heroText{
         background-color: rgba(84, 3, 87, 0.233);
@@ -567,7 +569,6 @@ footer{
     .footerMid, .footerRight{
         min-width: none;
         text-align: left;
-        width:50%;
         flex: 1;
     }
     footer{
@@ -577,14 +578,17 @@ footer{
 }
 
 @media (max-width: 778px){
+    section, .quote{
+        padding: 1.8rem;
+    }
     .hero{
-        background: url('./pomerian1.jpg');
+        background: url('./pomerian2.jpg');
         background-size: cover;
         align-items: center;
     }
-    .heroInfo{
+    /* .heroInfo{
         margin-top:0.5rem;
-    }
+    } */
     .txt{
         font-size: 0.8rem;
     }
@@ -622,11 +626,15 @@ footer{
     .whyPomArticle p{
         font-size: 0.8rem;
     }
-    
+    .footerMid{
+        min-width: max-content;
+        flex: 0;
+        margin-right:40px;
+    }
 } 
 @media (max-width: 664px){
     section, .quote{
-        padding: 2rem;
+        padding: 1.5rem;
     }
     footer{
         height: 710px;
@@ -653,7 +661,6 @@ footer{
         text-align: center;
         left:50%;
         top: 0px;
-        z-index: 999;
         padding: 0.5rem;
         overflow: hidden;
         border-radius: 1rem;
@@ -664,7 +671,7 @@ footer{
         box-shadow: 0px 3px 8px rgba(88, 7, 64, 0.158);;
     }
     .heroInfo{
-        margin-top:0;
+        margin-top:3rem;
     }
     .txt{
         font-size: 0.7rem;
@@ -732,6 +739,14 @@ footer{
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
     }
+    .footerMid{
+        min-width: max-content;
+        flex: 0;
+        margin-right:20px;
+    }
+    .footerRight{
+        flex-grow: 1;
+    }
     .cardContainer{
         gap: 10px;
     }
@@ -778,7 +793,7 @@ footer{
 }
 @media (max-width: 425px){
     section, .quote{
-        padding: 1rem;
+        padding: 0.8rem;
     }
     .hero{
         background: url('./pomerian-potrit.jpg');
@@ -839,5 +854,22 @@ footer{
     }
     .whyPomArticle p{
         font-size: 0.65rem;
+    }
+    .footer .footerText{
+        font-size: 0.7rem;
+    }
+    .card img{
+        height: 200px;
+        /* width: 100%;
+        display: flex;
+        justify-content: center;
+        object-fit: cover; */
+    
+    }
+    .card .cardDescription{
+        font-size: 0.8rem;
+    }
+    .cardContainer .card{
+        width: 250px;
     }
 }
