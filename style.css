@@ -76,36 +76,7 @@ p{
     font-size: 1.2rem;
     font-weight: 600;
 }
-.heading{
-    display: inline-block;
-}
-.heading::after{
-    content: "";
-    position: absolute;
-    left: 42%;
-    bottom:-2px;
-    width: 10%;
-    height: 6px;
-    border-radius: 5px;
-    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
 
-}
-.heading::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom:-2px;
-    width: 40%;
-    height: 6px;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-}
-strong{
-    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
-    color: transparent; /* Make the text itself transparent */
-    /* -webkit-background-clip: text; Clip the background to the text */
-    background-clip: text; /* Standard property for compatibility */
-}
 .txtdes{
     font-size: 1rem;
 }
@@ -184,14 +155,43 @@ ul li:hover{
     display: none;
     font-weight: 600;
     color: var(--primary-color);
-    padding: 0.25rem 1rem;
     border-radius: 1rem;
+    font-size: 1.4rem;
 }
 .menu:hover{
     background-color: rgb(236, 236, 236);
 }
 
+.heading{
+    display: inline-block;
+}
+.heading::after{
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom:-2px;
+    width: 10%;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
 
+}
+.heading::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-2px;
+    width: 40%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+strong{
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+    color: transparent; /* Make the text itself transparent */
+    /* -webkit-background-clip: text; Clip the background to the text */
+    background-clip: text; /* Standard property for compatibility */
+}
 /* hero section */
 
 .hero{
@@ -333,6 +333,11 @@ ul li:hover{
     display: flex;
     justify-content: end;
     padding: 0.25rem 0.75rem 0.8rem;
+}
+.marketplace .marketPlaceBtn{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 0 0;
 }
 
 /* Why Pomerians */
@@ -756,6 +761,9 @@ footer{
     .card h3{
         font-size: 1.5rem;
     }
+    .btn2{
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 470px){
@@ -814,7 +822,7 @@ footer{
         max-width:300px; 
     }
     .menu{
-        font-size: .75rem;
+        font-size: 1.2rem;
     }
     .btn{
         font-weight: 500;
