@@ -65,6 +65,7 @@
 }
 .cards .card{
     overflow: hidden;
+    background-color: var(--bgcolor);
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(77, 3, 70, 0.445);
 }
