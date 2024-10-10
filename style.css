@@ -3,6 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 :root{
@@ -21,7 +22,8 @@ body{
     border-bottom-right-radius: 0px;
     border: none;
     background: linear-gradient(to bottom right,#3063FF, #C325D1, #A92FFF);
-
+    display: flex;
+    align-items: center;
     color: #fff;
     font-weight: 550;
     font-size: .8rem;
@@ -49,7 +51,8 @@ body{
 }
 .btn:hover{
     box-shadow: none;
-    border-top-left-radius: 0px;
+    color: rgb(216, 216, 216);
+    border-top-left-radius: 5px;
     background-color: var(--secondary-color);
 }
 section{
@@ -767,6 +770,9 @@ footer{
 }
 
 @media (max-width: 470px){
+    nav{
+        padding: 0.5rem 0.6rem;
+    }
     .cardTitle .status{
         font-size: 0.65rem;
     }
@@ -834,9 +840,7 @@ footer{
     .logo img{
         height: 50px;
     }
-    nav{
-        padding: 0.7rem 1rem;
-    }
+    
     .logo{
         width: 50px;
     }
