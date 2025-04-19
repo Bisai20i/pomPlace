@@ -1,386 +1,577 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PomPalace</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="slider.css">
-    <link rel="icon" href="./pompalace.png" type="image/x-icon">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="icon" href="./pompalace.png" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Splidecss -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+  </head>
+  <body>
     <nav>
-        <div class="logo"> <img src="./pompalace.png" alt=""></div>
-        <strong onclick="openMenu()" class="menu" id="menu"><i class='bx bx-menu'></i></strong>
-        <ul id="navLinks">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#marketplace">MarketPlace</a></li>
-            <li><a href="#aboutus">About Us</a></li>
-            <li><a href="#contactus">Contact Us</a></li>
-            <li id="close" onclick="closeMenu()">Close</li>
-        </ul>
-        <button class="btn">Explore Poms </button>
+      <div class="logo"><img src="./pompalace.png" alt /></div>
+      <ul id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#contactus">Contact Us</a></li>
+        <li id="close" onclick="closeMenu()">Close</li>
+      </ul>
+      <div style="display: flex; gap: 10px;">
+        <strong onclick="openMenu()" class="menu" id="menu"
+          ><i class="bx bx-menu"></i></strong>
+        <button class="btn"><i class="bx bxs-bell"></i></button>
+      </div>
+      
     </nav>
     <section class="hero" id="hero">
-        <div class="heroInfo">
-            
-            <h1>
-                Welcome TO <br>
-                POM<span>PALACE</span><br>
-                NEPAL
-            </h1>
-            <p class="txt"> Your One-Stop Palace for Pomeranian Companionship</p>
-            <div class="heroBtn">
-                <a href="./MarketPlace.htm" class="btn2"><strong>Find a Pom <i class='bx bxs-chevrons-right'></i></strong></a>
-            </div>
+      <div class="heroInfo">
+        <h1>
+          Welcome TO <br />
+          POM<span>PALACE</span><br />
+          NEPAL
+        </h1>
+        <p class="txt">Your One-Stop Palace for Pomeranian Companionship</p>
+        <div class="heroBtn">
+          <a href="./MarketPlace.htm" class="btn2"
+            ><strong>Find a Pom <i class="bx bxs-chevrons-right"></i></strong
+          ></a>
         </div>
+      </div>
     </section>
     <section class="about" id="aboutus">
-        <div style="display: flex; justify-content: center;"><h2 class="aboutHeading heading">About <strong>Us</strong></h2></div>
-        <div class="aboutContent">
-            <div class="img">
-                <img src="./dogs.png" alt="happy dogs">
-            </div>
-            <div class="aboutText">
-                <p class="txtdes">Welcome to PomPalace, where our passion for Pomeranians brings joy to families everywhere. We are dedicated to raising healthy, happy Pomeranian puppies with the highest standards of care and love. Our mission is to connect these delightful pups with loving homes where they can thrive as cherished companions. <br> <br>        At PomPalace, we treat each Pomeranian like family. Our expert team ensures that every puppy is well-socialized, healthy, and ready to become your loyal friend. We are committed to transparency, quality, and ethical breeding practices, offering you not only an adorable puppy but also the confidence of a trustworthy source. <br> <br>We believe in making the process of finding your furry family member as easy and enjoyable as possible. Whether you're a first-time pet parent or an experienced dog lover, we're here to guide you every step of the way, ensuring you and your new Pomeranian have a wonderful journey together.
-                </p>
-            </div>
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">About <strong>Us</strong></h2>
+      </div>
+      <div class="aboutContent">
+        <div class="img">
+          <img src="./dogs.png" alt="happy dogs" />
         </div>
-        <p class="punchtext">“Join our growing PomPalace family today—where happiness comes on four paws!”</p>
-        
+        <div class="aboutText">
+          <p class="txtdes">
+            Welcome to PomPalace, where our passion for Pomeranians brings joy
+            to families everywhere. We are dedicated to raising healthy, happy
+            Pomeranian puppies with the highest standards of care and love. Our
+            mission is to connect these delightful pups with loving homes where
+            they can thrive as cherished companions. <br />
+            <br />
+            At PomPalace, we treat each Pomeranian like family. Our expert team
+            ensures that every puppy is well-socialized, healthy, and ready to
+            become your loyal friend. We are committed to transparency, quality,
+            and ethical breeding practices, offering you not only an adorable
+            puppy but also the confidence of a trustworthy source.
+            <br />
+            <br />We believe in making the process of finding your furry family
+            member as easy and enjoyable as possible. Whether you're a
+            first-time pet parent or an experienced dog lover, we're here to
+            guide you every step of the way, ensuring you and your new
+            Pomeranian have a wonderful journey together.
+          </p>
+        </div>
+      </div>
+      <p class="punchtext">
+        “Join our growing PomPalace family today—where happiness comes on four
+        paws!”
+      </p>
     </section>
     <div class="quote">
-        <div class="quoteBox">
-            <h1><i class='bx bxs-quote-right'></i></h1>
-            <article>"The only creatures that are evolved enough to convey pure love are dogs and infants, and Pomeranians do it best."</article>
-            <aside>Johnny Depp</aside>
-        </div>
-        
+      <div class="quoteBox">
+        <h1><i class="bx bxs-quote-right"></i></h1>
+        <article>
+          "The only creatures that are evolved enough to convey pure love are
+          dogs and infants, and Pomeranians do it best."
+        </article>
+        <aside>Johnny Depp</aside>
+      </div>
     </div>
-    <section class="marketplace" id="marketplace">
-        <div style="display: flex; justify-content: center;"><h2 class="aboutHeading heading">Market <strong>Place</strong></h2></div>
-        <div class="cardContainer">
-            <div class="card">
-                <img src="./poms/pom2.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Orange Male</p>
-                    <div class="status">Available</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
+
+    <!-- Services Modal -->
+
+    <section id="service-modal">
+      <div id="stud-box" style="display: none">
+        <h3 class="modal-head">
+          <strong onclick="closeServiceModal()"
+            ><i class="bx bx-chevron-left"></i> Back</strong
+          >
+          <strong onclick="toggleService('market')"
+            >MarketPlace <i class="bx bx-chevron-right"></i
+          ></strong>
+        </h3>
+        <div class="stud-profile">
+          <img
+            src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+            alt=" Mr.Ice"
+          />
+          <article>
+            <h2 class="aboutHeading heading">Mr. <strong>Ice</strong></h2>
+            <hr />
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+              porro commodi eligendi ad eos aperiam harum, nihil deleniti
+              veritatis quibusdam et aspernatur alias tempore repudiandae
+              accusantium voluptate architecto! Corporis perferendis nostrum
+              blanditiis reiciendis saepe aperiam odio porro repellat dolorum
+              modi?
+            </p>
+            <div class="stud-details">
+              <div class="detail-card">
+                <i class="bx bx-area"></i>
+                <aside>
+                  <p>Height (inch)</p>
+                  <h2><strong> 4</strong></h2>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i>5</i>
+                <aside>
+                  <p>Height (inch)</p>
+                  <h2><strong> 4</strong></h2>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i>5</i>
+                <aside>
+                  <p>Height (inch)</p>
+                  <h2><strong> 4</strong></h2>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i>5</i>
+                <aside>
+                  <p>Height (inch)</p>
+                  <h2><strong> 4</strong></h2>
+                </aside>
+              </div>
             </div>
-            <div class="card">
-                <img src="./poms/pom1.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Snow White</p>
-                    <div class="status">Available</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://rockykanaka.com/wp-content/uploads/2023/11/image-87-768x768.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Blue Merle</p>
-                    <div class="status">Available</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            
+          </article>
         </div>
-        <div class="marketPlaceBtn"><a href="./MarketPlace.htm" class="btn2"><strong>See More <i class='bx bxs-chevrons-right'></i></strong> </a></div>
+        <div id="image-carousel" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+                  alt
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://th.bing.com/th/id/R.35e0aa03c2a44d1a115e344cb9dd9ba5?rik=DnLP6CpOV%2fsdwg&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fphotos%2f18700000%2fPomeranian-all-small-dogs-18774587-1280-1024.jpg&ehk=DnH5XYmv6R2dFJGzK7LGsqlKC4lWgSUzPPV4%2fULPFRc%3d&risl=&pid=ImgRaw&r=0"
+                  alt
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  src="https://th.bing.com/th/id/R.3fdc52a187e384fb2d702b403e897237?rik=pfIygosngbirWA&riu=http%3a%2f%2fcdn.sheknows.com%2farticles%2f2015%2f02%2fMike_C%2fSK_US%2fPomeranian.jpg&ehk=i0w437Ncq62Dqo1Mx43rBKEwZIeShJLa6opVcack7hU%3d&risl=&pid=ImgRaw&r=0"
+                  alt
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="market" style="display: none">
+        <h3 class="modal-head">
+          <strong onclick="toggleService('stud-box')"
+            ><i class="bx bx-chevron-left"></i> Stud Service</strong
+          >
+          <strong onclick="closeServiceModal()"
+            >Back <i class="bx bx-chevron-right"></i
+          ></strong>
+        </h3>
+        <div style="display: flex; justify-content: center">
+          <h2 class="aboutHeading heading">Market <strong>Place</strong></h2>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <img src="./poms/pom2.jpeg" alt="cardImage" />
+            <div class="cardTitle">
+              <p>Orange Male</p>
+              <div class="status">Available</div>
+            </div>
+            <h3>NPR 100000</h3>
+            <div class="cardDescription">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus minus, provident temporibus voluptatibus animi aut!
+              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
+              temporibus ratione earum perferendis corporis amet neque
+              distinctio impedit aut ipsa eos molestias id dicta labore vero.
+            </div>
+            <div class="cardFooter">
+              <button class="btn">Book now</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./poms/pom1.jpeg" alt="cardImage" />
+            <div class="cardTitle">
+              <p>Snow White</p>
+              <div class="status">Available</div>
+            </div>
+            <h3>NPR 100000</h3>
+            <div class="cardDescription">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus minus, provident temporibus voluptatibus animi aut!
+              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
+              temporibus ratione earum perferendis corporis amet neque
+              distinctio impedit aut ipsa eos molestias id dicta labore vero.
+            </div>
+            <div class="cardFooter">
+              <button class="btn">Book now</button>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="https://rockykanaka.com/wp-content/uploads/2023/11/image-87-768x768.jpeg"
+              alt="cardImage"
+            />
+            <div class="cardTitle">
+              <p>Blue Merle</p>
+              <div class="status">Available</div>
+            </div>
+            <h3>NPR 100000</h3>
+            <div class="cardDescription">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus minus, provident temporibus voluptatibus animi aut!
+              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
+              temporibus ratione earum perferendis corporis amet neque
+              distinctio impedit aut ipsa eos molestias id dicta labore vero.
+            </div>
+            <div class="cardFooter">
+              <button class="btn">Book now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">Our <strong>Services</strong></h2>
+      </div>
+
+      <div class="servicesContent">
+        <div class="service studService">
+          <p class="headText">Stud Service</p>
+          <div class="serviceImg">
+            <img
+              src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+              alt="stud image"
+            />
+            <article class="hoverSection">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
+                nesciunt, numquam quas, sapiente magni voluptas repudiandae
+                neque inventore, ex ullam unde mollitia magnam dolorum esse
+                nihil hic commodi porro quisquam.
+              </p>
+              <div class="serviceLink">
+                <span onclick="openServiceModal('stud-box')">
+                  <i class="bx bx-link-external"></i>
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="service marketplace">
+          <p class="headText">MarketPlace</p>
+          <div class="serviceImg">
+            <img
+              src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+              alt="stud image"
+            />
+            <article class="hoverSection">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
+                nesciunt, numquam quas, sapiente magni voluptas repudiandae
+                neque inventore, ex ullam unde mollitia magnam dolorum esse
+                nihil hic commodi porro quisquam.
+              </p>
+              <div class="serviceLink">
+                <span onclick="openServiceModal('market')">
+                  <i class="bx bx-link-external"></i
+                ></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="pomColors">
-        <div style="display: flex; justify-content: center;"><h2 class="aboutHeading heading">POM <strong>Colors</strong></h2></div>
-        <!-- <div class="cardContainer">
-            <div class="card">
-                <img src="./poms/golden.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Golden</p>
-                    <div class="status">Rare Color</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/snowwhite.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Snow White</p>
-                    <div class="status">Attractive</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/blackntan.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Black and Tan</p>
-                    <div class="status">Rare Color</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/offwhite.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Off White</p>
-                    <div class="status">Common Color</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/parti.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Parti</p>
-                    <div class="status">Rare</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/black.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Black Color</p>
-                    <div class="status">Common Color</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./poms/chocolate.jpeg" alt="cardImage">
-                <div class="cardTitle">
-                    <p>Chocolate</p>
-                    <div class="status">Rare</div>
-                </div>
-                <h3>NPR 100000</h3>
-                <div class="cardDescription">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus minus, provident temporibus voluptatibus animi aut! Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur, temporibus ratione earum perferendis corporis amet neque distinctio impedit aut ipsa eos molestias id dicta labore vero.
-                </div>
-                <div class="cardFooter">
-                    <button class="btn">Book now</button>
-                </div>
-            </div>
-        </div> -->
-        <div class="wrapper" style="--noi:7">
-            <div class="slider">
-                <div class="item" style="--pos:0">
-                    <img src="./poms/snowwhite.jpeg" alt="snowwhite">
-                    
-                    <h3>Snow White</h3>
-                </div>
-                <div class="item" style="--pos:1">
-                    <img src="./poms/black.jpeg" alt="snowwhite">
-                    
-                    <h3>Black</h3>
-                </div>
-                <div class="item" style="--pos:2">
-                    <img src="./poms/blackntan.jpeg" alt="snowwhite">
-                    
-                    <h3>Black and Tan</h3>
-                </div>
-                <div class="item" style="--pos:3">
-                    <img src="./poms/chocolate.jpeg" alt="snowwhite">
-                    
-                    <h3>Chocolate</h3>
-                </div>
-                <div class="item" style="--pos:4">
-                    <img src="./poms/golden.jpeg" alt="snowwhite">
-                    
-                    <h3>Golden</h3>
-                </div>
-                <div class="item" style="--pos:5">
-                    <img src="./poms/offwhite.jpeg" alt="snowwhite">
-                    
-                    <h3>Off White</h3>
-                </div>
-                <div class="item" style="--pos:6">
-                    <img src="./poms/parti.jpeg" alt="snowwhite">
-                    
-                    <h3>Party POM</h3>
-                </div>
-                
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">POM <strong>Colors</strong></h2>
+      </div>
 
-            </div>
+      <div class="wrapper" style="--noi: 7">
+        <div class="slider">
+          <div class="item" style="--pos: 0">
+            <img src="./poms/snowwhite.jpeg" alt="snowwhite" />
+
+            <h3>Snow White</h3>
+          </div>
+          <div class="item" style="--pos: 1">
+            <img src="./poms/black.jpeg" alt="snowwhite" />
+
+            <h3>Black</h3>
+          </div>
+          <div class="item" style="--pos: 2">
+            <img src="./poms/blackntan.jpeg" alt="snowwhite" />
+
+            <h3>Black and Tan</h3>
+          </div>
+          <div class="item" style="--pos: 3">
+            <img src="./poms/chocolate.jpeg" alt="snowwhite" />
+
+            <h3>Chocolate</h3>
+          </div>
+          <div class="item" style="--pos: 4">
+            <img src="./poms/golden.jpeg" alt="snowwhite" />
+
+            <h3>Golden</h3>
+          </div>
+          <div class="item" style="--pos: 5">
+            <img src="./poms/offwhite.jpeg" alt="snowwhite" />
+
+            <h3>Off White</h3>
+          </div>
+          <div class="item" style="--pos: 6">
+            <img src="./poms/parti.jpeg" alt="snowwhite" />
+
+            <h3>Party POM</h3>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <div class="quote">
-        <div class="quoteBox">
-            <h1><i class='bx bxs-quote-right'></i></h1>
-            <article>"Happiness is a warm Pomeranian."</article>
-            <aside>Charles M. Schulz</aside>
-        </div>
-        
+      <div class="quoteBox">
+        <h1><i class="bx bxs-quote-right"></i></h1>
+        <article>"Happiness is a warm Pomeranian."</article>
+        <aside>Charles M. Schulz</aside>
+      </div>
     </div>
 
-
     <section class="whyPoms">
-        <div style="display: flex; justify-content: center;"><h2 class="aboutHeading heading">WHY <strong>Pomeranians?</strong></h2></div>
-        <div class="wrapper">
-            <div class="leftContent">
-                <img class="whyPomImg" src="./Zoom Out.png" alt="WhyPoms?">
-                <article class="whyPomArticle">
-                    <b>Big Personality in a Small Package</b>
-                    <p>Pomeranians are known for their lively and charismatic personalities. Despite their small size, they are full of energy, confidence, and charm, making them fantastic companions that brighten any home.</p>
-                </article>
-            </div>
-            <div class="rightContent">
-                <div class="leftContent">
-                    <img class="whyPomImg" src="./Easy.png" alt="WhyPoms?">
-                    <article class="whyPomArticle">
-                        <b>Intelligent and Easy to Train</b>
-                        <p>Pomeranians are very intelligent dogs, making training a fun and rewarding experience. They learn new commands quickly, and their eagerness to please means they excel in obedience training and even fun tricks. </p>
-                    </article>
-                </div>
-            </div>
-            <div class="leftContent">
-                <img class="whyPomImg" src="./Loyalty.png" alt="WhyPoms?">
-                <article class="whyPomArticle">
-                    <b>Loyal Companions</b>
-                    <p>Pomeranians form strong bonds with their owners. They are affectionate and love to be part of family activities, always eager to snuggle up or follow you around. Their loyalty makes them wonderful lifelong companions. </p>
-                </article>
-            </div>
-            <div class="rightContent">
-                <div class="leftContent">
-                    <img class="whyPomImg" src="./Weather.png" alt="WhyPoms?">
-                    <article class="whyPomArticle">
-                        <b>Adaptable for Any Lifestyle</b>
-                        <p>Whether you live in a cozy apartment or a larger home, Pomeranians adapt well to different living situations. Their small size and moderate exercise needs mean they can thrive in urban environments, while their playful energy makes them happy in more spacious homes too.</p>
-                    </article>
-                </div>
-            </div>
-            
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">WHY <strong>Pomeranians?</strong></h2>
+      </div>
+      <div>
+        <div class="leftContent">
+          <img class="whyPomImg" src="./Zoom Out.png" alt="WhyPoms?" />
+          <article class="whyPomArticle">
+            <b>Big Personality in a Small Package</b>
+            <p>
+              Pomeranians are known for their lively and charismatic
+              personalities. Despite their small size, they are full of energy,
+              confidence, and charm, making them fantastic companions that
+              brighten any home.
+            </p>
+          </article>
         </div>
+        <div class="rightContent">
+          <div class="leftContent">
+            <img class="whyPomImg" src="./Easy.png" alt="WhyPoms?" />
+            <article class="whyPomArticle">
+              <b>Intelligent and Easy to Train</b>
+              <p>
+                Pomeranians are very intelligent dogs, making training a fun and
+                rewarding experience. They learn new commands quickly, and their
+                eagerness to please means they excel in obedience training and
+                even fun tricks.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="leftContent">
+          <img class="whyPomImg" src="./Loyalty.png" alt="WhyPoms?" />
+          <article class="whyPomArticle">
+            <b>Loyal Companions</b>
+            <p>
+              Pomeranians form strong bonds with their owners. They are
+              affectionate and love to be part of family activities, always
+              eager to snuggle up or follow you around. Their loyalty makes them
+              wonderful lifelong companions.
+            </p>
+          </article>
+        </div>
+        <div class="rightContent">
+          <div class="leftContent">
+            <img class="whyPomImg" src="./Weather.png" alt="WhyPoms?" />
+            <article class="whyPomArticle">
+              <b>Adaptable for Any Lifestyle</b>
+              <p>
+                Whether you live in a cozy apartment or a larger home,
+                Pomeranians adapt well to different living situations. Their
+                small size and moderate exercise needs mean they can thrive in
+                urban environments, while their playful energy makes them happy
+                in more spacious homes too.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
     <footer id="contactus">
-        <div class="footer">
-            <div class="footerLeft">
-                <img src="./pompalace.png" alt="Footer Logo" class="footerLogo"><br>
-                <p class="headText">POMPALACE</p>
-                <div class="social">
-                    <i class='bx bxl-gmail'></i>
-                    <i class='bx bxl-facebook'></i>
-                    <i class='bx bxl-tiktok' ></i>
-                </div>
-                <div class="social">
-                    <i class='bx bxl-instagram-alt' ></i>
-                    <i class='bx bxl-whatsapp' ></i>
-                    <i class='bx bxs-map' ></i>
-                </div>
-                <p class="footerText">Contact: <a href="#"> +977 9801316504</a></p>
-                <p class="footerText">Mail: <a href="#">poms@pompalace.com</a></p>
-                <p class="footerText">Address: <a href="#">Awasnagar, Pokhara, 33700</a></p>
-            </div>
-            <div class="footerMid">
-                <p class="headText">Usefull links</p>
-                <p class="footerText"><a href="#hero">Home</a></p>
-                <p class="footerText"><a href="#marketplace">MarketPlace</a></p>
-                <p class="footerText"><a href="#aboutus">AboutUs</a></p>
-                <p class="footerText"><a href="">Other Breeds</a></p>
-                <p class="footerText"><a href="">Sell Poms</a></p>
-                <p class="footerText"><a href="">Join Us</a></p>
-            </div>
-            <div class="footerRight">
-                <p class="headText">Give Us Feedback:</p>
-                <form action="">
-                    <input type="text" name="name" placeholder="Enter your Full Name">
-                    <input type="email" name="email" placeholder="Enter your valid Email">
-                    <textarea name="message" id="message" cols="20" rows="8" placeholder="Enter your Message"></textarea>
-                    <div class="submitBtn">
-                        <button type="submit" class="btn">Submit</button>
-                    </div>
-                    
-                </form>
-            </div>
+      <div class="footer">
+        <div class="footerLeft">
+          <img
+            src="./pompalace.png"
+            alt="Footer Logo"
+            class="footerLogo"
+          /><br />
+          <p class="headText">POMPALACE</p>
+          <div class="social">
+            <i class="bx bxl-gmail"></i>
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-tiktok"></i>
+          </div>
+          <div class="social">
+            <i class="bx bxl-instagram-alt"></i>
+            <i class="bx bxl-whatsapp"></i>
+            <i class="bx bxs-map"></i>
+          </div>
+          <p class="footerText">Contact: <a href="#"> +977 9801316504</a></p>
+          <p class="footerText">Mail: <a href="#">poms@pompalace.com</a></p>
+          <p class="footerText">
+            Address: <a href="#">Awasnagar, Pokhara, 33700</a>
+          </p>
         </div>
-
+        <div class="footerMid">
+          <p class="headText">Usefull links</p>
+          <p class="footerText"><a href="#hero">Home</a></p>
+          <p class="footerText"><a href="#marketplace">MarketPlace</a></p>
+          <p class="footerText"><a href="#aboutus">AboutUs</a></p>
+          <p class="footerText"><a href>Other Breeds</a></p>
+          <p class="footerText"><a href>Sell Poms</a></p>
+          <p class="footerText"><a href>Join Us</a></p>
+        </div>
+        <div class="footerRight">
+          <p class="headText">Give Us Feedback:</p>
+          <form action>
+            <input type="text" name="name" placeholder="Enter your Full Name" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your valid Email"
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="20"
+              rows="8"
+              placeholder="Enter your Message"
+            ></textarea>
+            <div class="submitBtn">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </footer>
-</body>
-<script>
-    let menu = document.getElementById('menu')
-    function openMenu(){
-            document.getElementById('navLinks').style.transform = 'translate(-50%, 0%)'
-            document.getElementById('close').textContent === 'Close'
+  </body>
+  <script>
+    let menu = document.getElementById("menu");
+    function openMenu() {
+      document.getElementById("navLinks").style.transform =
+        "translate(-50%, 0%)";
+      document.getElementById("close").textContent === "Close";
     }
-    function closeMenu(){
-        document.getElementById('navLinks').style.transform = 'translate(-50%,-100%)'
-        document.getElementById('close').textContent === 'open'
+    function closeMenu() {
+      document.getElementById("navLinks").style.transform =
+        "translate(-50%,-100%)";
+      document.getElementById("close").textContent === "open";
     }
-</script>
-<script>
-    let sections= document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('nav li a');
-    let navbar= document.querySelector('nav');
+  </script>
 
-    window.onscroll =()=>{
-        sections.forEach(sec=>{
-            let top=window.scrollY;
-            let offset =sec.offsetTop -150;
-            let height=sec.offsetHeight;
-            let id =sec.getAttribute('id');
-            if(top>= offset && top <offset + height){
-                navLinks.forEach(link=>{
-                    link.classList.remove('active');
-                    document.querySelector('nav a[href*='+ id +']').classList.add('active');
-                })
-            }
-        });
-        // if(document.getElementById('close').textContent === 'Close'){
-        //     document.getElementById('navLinks').style.transform = 'translate(-50%,-100%)'
-        // }
+  <script>
+    //scripts to handle services toggle
+  </script>
+  <script>
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll("nav li a");
+    let navbar = document.querySelector("nav");
+
+    window.onscroll = () => {
+      sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            document
+              .querySelector("nav a[href*=" + id + "]")
+              .classList.add("active");
+          });
+        }
+      });
+      // if(document.getElementById('close').textContent === 'Close'){
+      //     document.getElementById('navLinks').style.transform = 'translate(-50%,-100%)'
+      // }
     };
+  </script>
 
+  <script>
+    let studModal = document.getElementById("service-modal");
+    function openServiceModal(e) {
+      let scrollPosition = window.scrollY;
+      console.log(scrollPosition);
+      studModal.style.top = scrollPosition + 8 + "px";
+      studModal.style.display = "block";
+      document.getElementById(e).style.display = "block";
 
-    
-</script>
+      document.body.style.overflow = "hidden";
+      if (e !== "market") {
+        document.getElementById("market").style.display = "none";
+      } else {
+        document.getElementById("stud-box").style.display = "none";
+      }
+      console.log(e);
+    }
+
+    function toggleService(e) {
+      if (e == "market") {
+        document.getElementById("stud-box").style.display = "none";
+        document.getElementById("market").style.display = "block";
+      } else {
+        document.getElementById("stud-box").style.display = "block";
+        document.getElementById("market").style.display = "none";
+      }
+    }
+
+    function closeServiceModal() {
+      document.body.style.overflow = "auto";
+      studModal.style.display = "none";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var splide = new Splide("#image-carousel", {
+        arrows: true, // Hide navigation arrows
+        pagination: true, // Hide pagination dots
+        drag: true,
+        rewind: true, // Disable manual dragging
+      }).mount();
+
+      // Auto-scroll function
+      setInterval(function () {
+        splide.go("+1"); // Moves to the next slide smoothly
+      }, 5000); // Adjust speed (lower = faster scrolling)
+    });
+  </script>
 </html>
