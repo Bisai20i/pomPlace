@@ -19,6 +19,21 @@
     />
   </head>
   <body>
+
+    <div class="alertCard" id="alertCard" style="display: none;">
+      <article>
+        <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+          ></path>
+        </svg>
+        <p id="alertContent">
+          Lorem ipsum dolor sit amet, consectetur<br />
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </article>
+    </div>
     <nav>
       <div class="logo"><img src="./pompalace.png" alt /></div>
       <ul id="navLinks">
@@ -29,13 +44,39 @@
         <li><a href="#contactus">Contact Us</a></li>
         <li id="close" onclick="closeMenu()">Close</li>
       </ul>
-      <div style="display: flex; gap: 10px;">
+      <div style="display: flex; gap: 10px">
         <strong onclick="openMenu()" class="menu" id="menu"
-          ><i class="bx bx-menu"></i></strong>
-        <button class="btn"><i class="bx bxs-bell"></i></button>
+          ><i class="bx bx-menu"></i
+        ></strong>
+        <button class="btn" onclick="displayNotices()">
+          <i class="bx bxs-bell"></i>
+        </button>
       </div>
-      
     </nav>
+
+    <!-- <div id="noticeContainer"></div> -->
+
+    <!-- <section class="noticeBox">
+      <div class="notice">
+        <h3>
+          <strong>Notice Heading or Title</strong
+          ><i class="bx bx-x" onclick="closeNoticeBox(this)"></i>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          facere distinctio non porro ratione cumque, ex soluta numquam officia
+          ad quo unde enim? Ut assumenda rerum ipsa aperiam harum distinctio!
+        </p>
+        <div class="noticeImages">
+          <img src="./pomerian1.jpg" alt="" />
+        </div>
+        <div class="noticeClose">
+          <button class="btn2" onclick="closeNoticeBox(this)">
+            <strong> Okay <i class="bx bx-check"></i></strong>
+          </button>
+        </div>
+      </div>
+    </section> -->
     <section class="hero" id="hero">
       <div class="heroInfo">
         <h1>
@@ -45,9 +86,9 @@
         </h1>
         <p class="txt">Your One-Stop Palace for Pomeranian Companionship</p>
         <div class="heroBtn">
-          <a href="./MarketPlace.htm" class="btn2"
+          <button onclick="openServiceModal('market')" class="btn2"
             ><strong>Find a Pom <i class="bx bxs-chevrons-right"></i></strong
-          ></a>
+          ></button>
         </div>
       </div>
     </section>
@@ -111,50 +152,62 @@
         </h3>
         <div class="stud-profile">
           <img
-            src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+            src="./assets/ice.jpg"
             alt=" Mr.Ice"
           />
           <article>
             <h2 class="aboutHeading heading">Mr. <strong>Ice</strong></h2>
             <hr />
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
-              porro commodi eligendi ad eos aperiam harum, nihil deleniti
-              veritatis quibusdam et aspernatur alias tempore repudiandae
-              accusantium voluptate architecto! Corporis perferendis nostrum
-              blanditiis reiciendis saepe aperiam odio porro repellat dolorum
-              modi?
+              Meet Mr. Ice – a top-quality Toy Pomeranian with charm as cool as his name. Imported from India, Mr. Ice boasts a luxurious double coat, compact build, and a spirited personality. With his playful nature and striking appearance, he’s not just a pet — he’s a statement of elegance and companionship.
             </p>
             <div class="stud-details">
               <div class="detail-card">
-                <i class="bx bx-area"></i>
+                <i class='bx bxs-dog'></i>
                 <aside>
-                  <p>Height (inch)</p>
-                  <h2><strong> 4</strong></h2>
+                  <p>Face</p>
+                  <h3><strong>Doll Face</strong></h3>
                 </aside>
               </div>
               <div class="detail-card">
-                <i>5</i>
+                <i class='bx bx-move'></i>
                 <aside>
-                  <p>Height (inch)</p>
-                  <h2><strong> 4</strong></h2>
+                  <p>Size</p>
+                  <h3><strong>Toy-sized</strong></h3>
                 </aside>
               </div>
               <div class="detail-card">
-                <i>5</i>
+                <i class='bx bxs-crown' ></i>
                 <aside>
-                  <p>Height (inch)</p>
-                  <h2><strong> 4</strong></h2>
+                  <p>Coat Type</p>
+                  <h3><strong> Fluffy, Double Coat</strong></h3>
                 </aside>
               </div>
               <div class="detail-card">
-                <i>5</i>
+                <i class='bx bxs-ruler' ></i>
                 <aside>
-                  <p>Height (inch)</p>
-                  <h2><strong> 4</strong></h2>
+                  <p>Fur Length</p>
+                  <h3><strong>Long</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                
+                <i class='bx bx-bone' ></i>
+                <aside>
+                  <p>Activity Level</p>
+                  <h3><strong>Energetic</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class='bx bx-heart-circle' ></i>
+                <aside>
+                  <p>Personality</p>
+                  <h3><strong>Playful, Alert, Loyal</strong></h3>
                 </aside>
               </div>
             </div>
+            <hr />
+            <button class="btn" onclick="bookStud()">Book Now</button>
           </article>
         </div>
         <div id="image-carousel" class="splide" aria-label="Beautiful Images">
@@ -162,19 +215,19 @@
             <ul class="splide__list">
               <li class="splide__slide">
                 <img
-                  src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+                  src="./assets/ice1.jpeg"
                   alt
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://th.bing.com/th/id/R.35e0aa03c2a44d1a115e344cb9dd9ba5?rik=DnLP6CpOV%2fsdwg&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fphotos%2f18700000%2fPomeranian-all-small-dogs-18774587-1280-1024.jpg&ehk=DnH5XYmv6R2dFJGzK7LGsqlKC4lWgSUzPPV4%2fULPFRc%3d&risl=&pid=ImgRaw&r=0"
+                  src="./assets/ice2.jpeg"
                   alt
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://th.bing.com/th/id/R.3fdc52a187e384fb2d702b403e897237?rik=pfIygosngbirWA&riu=http%3a%2f%2fcdn.sheknows.com%2farticles%2f2015%2f02%2fMike_C%2fSK_US%2fPomeranian.jpg&ehk=i0w437Ncq62Dqo1Mx43rBKEwZIeShJLa6opVcack7hU%3d&risl=&pid=ImgRaw&r=0"
+                  src="./assets/ice3.jpeg"
                   alt
                 />
               </li>
@@ -183,6 +236,22 @@
         </div>
       </div>
       <div id="market" style="display: none">
+        <div id="confirmModal" class="modal">
+          <div class="modalContent">
+            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg" >
+              <path
+                d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              ></path>
+            </svg> <br>
+            <h2 class="aboutHeading heading" style="font-size: 2rem;">Confirm Booking ?</h2>
+            <p id="confirmText"></p>
+            <div class="modalActions">
+              <button class="btn" id="confirmBtn">Confirm</button>
+              <button class="btn2" onclick="closeModal()">Cancel</button>
+            </div>
+          </div>
+        </div>
+
         <h3 class="modal-head">
           <strong onclick="toggleService('stud-box')"
             ><i class="bx bx-chevron-left"></i> Stud Service</strong
@@ -194,44 +263,12 @@
         <div style="display: flex; justify-content: center">
           <h2 class="aboutHeading heading">Market <strong>Place</strong></h2>
         </div>
-        <div class="cardContainer">
-          <div class="card">
-            <img src="./poms/pom2.jpeg" alt="cardImage" />
-            <div class="cardTitle">
-              <p>Orange Male</p>
-              <div class="status">Available</div>
-            </div>
-            <h3>NPR 100000</h3>
-            <div class="cardDescription">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Repellendus minus, provident temporibus voluptatibus animi aut!
-              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
-              temporibus ratione earum perferendis corporis amet neque
-              distinctio impedit aut ipsa eos molestias id dicta labore vero.
-            </div>
-            <div class="cardFooter">
-              <button class="btn">Book now</button>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./poms/pom1.jpeg" alt="cardImage" />
-            <div class="cardTitle">
-              <p>Snow White</p>
-              <div class="status">Available</div>
-            </div>
-            <h3>NPR 100000</h3>
-            <div class="cardDescription">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Repellendus minus, provident temporibus voluptatibus animi aut!
-              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
-              temporibus ratione earum perferendis corporis amet neque
-              distinctio impedit aut ipsa eos molestias id dicta labore vero.
-            </div>
-            <div class="cardFooter">
-              <button class="btn">Book now</button>
-            </div>
-          </div>
-          <div class="card">
+        <div style="display: none; justify-content: center;" id="loadingSpinner">
+          <img src="./assets/spinner.gif" alt="loading" style="width: 150px" />
+        </div>
+        <div class="cardContainer" id="dogsContainer">
+          
+          <!-- <div class="card">
             <img
               src="https://rockykanaka.com/wp-content/uploads/2023/11/image-87-768x768.jpeg"
               alt="cardImage"
@@ -251,7 +288,7 @@
             <div class="cardFooter">
               <button class="btn">Book now</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -266,15 +303,12 @@
           <p class="headText">Stud Service</p>
           <div class="serviceImg">
             <img
-              src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+              src="./assets/ice.jpg"
               alt="stud image"
             />
             <article class="hoverSection">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
-                nesciunt, numquam quas, sapiente magni voluptas repudiandae
-                neque inventore, ex ullam unde mollitia magnam dolorum esse
-                nihil hic commodi porro quisquam.
+                PomPalace Nepal offers premium stud services with top-quality, purebred Pomeranian males. Our studs are healthy, certified, and selected for superior traits — ensuring the best breeding results for your female Poms.
               </p>
               <div class="serviceLink">
                 <span onclick="openServiceModal('stud-box')">
@@ -293,10 +327,7 @@
             />
             <article class="hoverSection">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. A
-                nesciunt, numquam quas, sapiente magni voluptas repudiandae
-                neque inventore, ex ullam unde mollitia magnam dolorum esse
-                nihil hic commodi porro quisquam.
+                Our marketplace features exclusive, homebred Toy Pomeranian puppies raised with care and quality. At PomPalace, we don’t just list dogs — we raise and sell our own, ensuring each puppy meets our high standards before reaching your home.
               </p>
               <div class="serviceLink">
                 <span onclick="openServiceModal('market')">
@@ -433,29 +464,31 @@
           /><br />
           <p class="headText">POMPALACE</p>
           <div class="social">
-            <i class="bx bxl-gmail"></i>
-            <i class="bx bxl-facebook"></i>
-            <i class="bx bxl-tiktok"></i>
+            <a href="mailto:pompalacenepal@gmail.com" target="_blank"><i class="bx bxl-gmail"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574521245434" target="_blank"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.tiktok.com/@pom.palace.nepal?_t=ZS-8vmzFH1wS9A&_r=1" target="_blank"><i class="bx bxl-tiktok"></i></a>
           </div>
           <div class="social">
-            <i class="bx bxl-instagram-alt"></i>
-            <i class="bx bxl-whatsapp"></i>
-            <i class="bx bxs-map"></i>
+            <a href="https://www.instagram.com/pompalacenepal?igsh=MXBwcmduYXI3ZmlldA==" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="https://wa.me/9769461814?text=Hello Pompalace Nepal" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://maps.app.goo.gl/wVG9jGQ9RxWSRosVA" target="_blank"><i class="bx bxs-map"></i></a>
           </div>
-          <p class="footerText">Contact: <a href="#"> +977 9801316504</a></p>
-          <p class="footerText">Mail: <a href="#">poms@pompalace.com</a></p>
+          <p class="footerText">Contact: <a href="#"> +977 976-9461814</a></p>
           <p class="footerText">
-            Address: <a href="#">Awasnagar, Pokhara, 33700</a>
+            Mail: <a href="mailto:pompalacenepal@gmail.com">pompalacenepal@gmail.com</a>
+          </p>
+          <p class="footerText">
+            Address: <a href="https://maps.app.goo.gl/wVG9jGQ9RxWSRosVA">Awasnagar, Pokhara, 33700</a>
           </p>
         </div>
         <div class="footerMid">
           <p class="headText">Usefull links</p>
           <p class="footerText"><a href="#hero">Home</a></p>
-          <p class="footerText"><a href="#marketplace">MarketPlace</a></p>
+          <p class="footerText"><a href="#services">Services</a></p>
           <p class="footerText"><a href="#aboutus">AboutUs</a></p>
-          <p class="footerText"><a href>Other Breeds</a></p>
-          <p class="footerText"><a href>Sell Poms</a></p>
-          <p class="footerText"><a href>Join Us</a></p>
+          <p class="footerText"><a aria-disabled="true">Other Breeds</a></p>
+          <p class="footerText"><a aria-disabled="true">Sell Poms</a></p>
+          <p class="footerText"><a aria-disabled="true">Join Us</a></p>
         </div>
         <div class="footerRight">
           <p class="headText">Give Us Feedback:</p>
@@ -474,13 +507,17 @@
               placeholder="Enter your Message"
             ></textarea>
             <div class="submitBtn">
-              <button type="submit" class="btn">Submit</button>
+              <button disabled type="submit" class="btn">Submit</button>
             </div>
           </form>
         </div>
       </div>
     </footer>
   </body>
+
+  <script>
+    const baseURL = "http://127.0.0.1:8000/api";
+  </script>
   <script>
     let menu = document.getElementById("menu");
     function openMenu() {
@@ -528,7 +565,6 @@
     let studModal = document.getElementById("service-modal");
     function openServiceModal(e) {
       let scrollPosition = window.scrollY;
-      console.log(scrollPosition);
       studModal.style.top = scrollPosition + 8 + "px";
       studModal.style.display = "block";
       document.getElementById(e).style.display = "block";
@@ -539,7 +575,6 @@
       } else {
         document.getElementById("stud-box").style.display = "none";
       }
-      console.log(e);
     }
 
     function toggleService(e) {
@@ -556,11 +591,23 @@
       document.body.style.overflow = "auto";
       studModal.style.display = "none";
     }
+
+    function closeNoticeBox(e) {
+      e.parentElement.parentElement.parentElement.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    function displayNotices() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.body.style.overflow = "hidden";
+      let notices = document.querySelectorAll(".noticeBox");
+      notices.forEach((notice) => (notice.style.display = "flex"));
+    }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
       var splide = new Splide("#image-carousel", {
         arrows: true, // Hide navigation arrows
         pagination: true, // Hide pagination dots
@@ -572,6 +619,187 @@
       setInterval(function () {
         splide.go("+1"); // Moves to the next slide smoothly
       }, 5000); // Adjust speed (lower = faster scrolling)
+
+      // load notices from server
+      try {
+        let response = await fetch(baseURL + "/notices");
+        const data = await response.json();
+        if (data.status) {
+          if (data.data.length > 0) {
+            data.data.forEach((notice) => {
+              //   console.log(notice);
+              let noticeContainer = document.createElement("section");
+              noticeContainer.classList.add("noticeBox");
+              let noticeContent = document.createElement("div");
+              noticeContent.classList.add("notice");
+              noticeContent.innerHTML = `
+                            <h3>
+                                <strong>${notice.title}</strong><i class="bx bx-x" onclick="closeNoticeBox(this)"></i>
+                            </h3>
+                            <p>
+                                ${notice.description}
+                            </p>
+                    
+                            <div class="noticeClose">
+                                <button class="btn2" onclick="closeNoticeBox(this)">
+                                    <strong> Okay <i class="bx bx-check"></i></strong>
+                                </button>
+                            </div>
+                        
+                    `;
+
+              if (notice.imagePath) {
+                const lastChild = noticeContent.lastElementChild;
+
+                // Insert newChild before the last child
+
+                let noticeImage = document.createElement("div");
+                noticeImage.classList.add("noticeImages");
+                noticeImage.innerHTML = `<img src="${notice.imagePath}" alt="" /> `;
+
+                noticeContent.insertBefore(noticeImage, lastChild);
+              }
+              noticeContainer.appendChild(noticeContent);
+              document.body.appendChild(noticeContainer);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              document.body.style.overflow = "hidden";
+            });
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
     });
+  </script>
+
+  <script>
+    let dogs = [];
+
+    document.addEventListener("DOMContentLoaded", async function () {
+      document.getElementById('loadingSpinner').style.display = "flex"
+      let response = await fetch(baseURL + "/alldogs");
+      const data = await response.json();
+
+      console.log(data);
+
+      if (data.status) {
+        dogs = data.data;
+        console.log(dogs);
+      } else {
+        console.error("Error:", data.message);
+      }
+
+      if (dogs.length > 0) {
+        let dogContainer = document.getElementById("dogsContainer");
+
+        dogs.forEach((d) => {
+          let dogcard = document.createElement("div");
+          dogcard.classList.add("card");
+
+          dogcard.innerHTML = `
+
+            <img src=${d.profile_img} alt="cardImage" />
+                <div class="cardTitle">
+                  <p class="dogName">${d.name}</p>
+                  <div class="status" style ="${
+                    d.available == 0
+                      ? "background-color: rgb(221, 92, 72); color: red;"
+                      : ""
+                  }">${d.available == 1 ? "Available" : "Sold Out"}</div>
+                </div>
+                <h3 class="dogPrice">NPR ${d.price}</h3>
+                <p class="cardDescription">
+                  ${d.description}
+                </p>
+                <div class="cardFooter">
+                  <button class="btn" onclick="showConfirmation(this)">Book now</button>
+                </div>
+          
+          `;
+          dogContainer.appendChild(dogcard);
+        });
+      }
+      else{
+        document.getElementById('alertContent').textContent = "No Dogs To Display."
+
+        document.getElementById('alertCard').style.display = "flex"
+
+        setTimeout(()=>{
+          document.getElementById('alertCard').style.display = "none"
+        },3000)
+      }
+
+      document.getElementById('loadingSpinner').style.display = "none"
+    });
+
+    let selectedDog = {
+      selected: false,
+      message: null,
+    };
+    function sendToWhatsApp(button) {}
+
+    function closeModal() {
+      document.getElementById("confirmModal").style.display = "none";
+    }
+
+    function showConfirmation(button) {
+      let card = button.parentElement.parentElement;
+      let imageurl = card.querySelector("img").getAttribute("src");
+      let name = card.querySelector(".dogName").innerText;
+
+      let price = card.querySelector(".dogPrice").innerText;
+      let description = card.querySelector(".cardDescription").innerText;
+
+      let message =
+        `*New Booking Request*%0A` +
+        `*Dog Name:* ${name}%0A` +
+        `*Price:* ${price}%0A` +
+        `*Description:* ${description}%0A` +
+        `*Image URL:* ${imageurl}`;
+
+      let phone = "9769461814";
+      let url = `https://wa.me/${phone}?text=${message}`;
+
+      selectedDog = {
+        selected: true,
+        message: message,
+        phone: phone,
+        url: url,
+      };
+      document.getElementById("confirmModal").style.display = "flex";
+    }
+
+    document
+      .getElementById("confirmBtn")
+      .addEventListener("click", function () {
+        if (!selectedDog.selected) {
+          console.log("no dogs selected");
+          return;
+        }
+
+        console.log(selectedDog);
+
+        window.open(selectedDog.url, "_blank");
+        closeModal();
+
+        document.getElementById('alertContent').textContent = "Order Placed Successfully!"
+
+        document.getElementById('alertCard').style.display = "flex"
+
+        setTimeout(()=>{
+          document.getElementById('alertCard').style.display = "none"
+        },3000)
+      });
+
+      function bookStud(){
+        let message =
+        `*Stud Booking Request*%0A` +
+        `*Dog Name:* Mr.Ice%0A`
+
+        let phone = "9769461814";
+        let url = `https://wa.me/${phone}?text=${message}`;
+
+        window.open(url, "_blank");
+      }
   </script>
 </html>
