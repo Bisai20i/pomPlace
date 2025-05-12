@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomPalace:MarketPlace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="market.css">
+    <link rel="icon" href="./pompalace.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <h3 class="navHeading">PomPalace: <strong >MarketPlace</strong></h3>
+        
+        <a href="./index.htm" class="btn"><i class='bx bx-arrow-from-right' style="padding-right: 5px;"></i>Home</a>
+    </nav>
+
+    <header class="controls">
+        <form action="#" class="controlForm">
+          <label for="selectBy" class="primaryText">List:</label>
+          <select name="selectBy">
+            <option value="all" selected>All</option>
+            <option value="pom">Pomeranians</option>
+            <option value="breedsm">Small Breeds</option>
+            <option value="breedlg">Larger Breeds</option>
+          </select>
+          <label for="filter" class="primaryText">Filter By:</label>
+          <select name="filter">
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="date">Revalent</option>
+            <option value="rating">Higest Ratings</option>
+          </select>
+          <button class="btn">Search</button>
+      </form>
+      <div class="leftBtn">
+        <button class="btn">Your Listings</button>
+        <button class="btn" onclick="addForSell()">Add for Sell</button>
+      </div>
+      
+      </header>
+
+      <div class="cards">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="status">Available</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="status">Available</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="status">Available</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="notAvailable">Sold Out</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="status">Available</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.o8rtgOsaxnguk_hGBTFG8gAAAA?rs=1&pid=ImgDetMain" alt="Dog Photo">
+            <div class="cardHead">
+                <p class="primaryText">Golden Male</p>
+                <aside class="notAvailable">Sold Out</aside>
+            </div>
+            <h3 >NPR.1,25,000</h3>
+            <div class="cardDescription">
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et nesciunt eligendi repellendus obcaecati? Porro ab, ad eligendi doloribus animi facilis vero facere quod earum ipsum, ullam laudantium id. Laborum mollitia hic vitae doloremque distinctio.
+            </div>
+            <div class="cardAction">
+                <i class='bx bxs-heart '></i>
+                <div>
+                    <p class="secondaryText">Location: Awasnagar, Pokhara, 33700</p>
+                    <div class="actionBtn">
+                        <button class="btn">See More</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+      </div>
+
+      <footer id="contactus">
+        <div class="footer">
+            <div class="footerLeft">
+                <img src="./pompalace.png" alt="Footer Logo" class="footerLogo"><br>
+                <p class="headText">POMPALACE</p>
+                <div class="social">
+                    <i class='bx bxl-gmail'></i>
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-tiktok' ></i>
+                </div>
+                <div class="social">
+                    <i class='bx bxl-instagram-alt' ></i>
+                    <i class='bx bxl-whatsapp' ></i>
+                    <i class='bx bxs-map' ></i>
+                </div>
+                <p class="footerText">Contact: <a href="#"> +977 9801316504</a></p>
+                <p class="footerText">Mail: <a href="#">poms@pompalace.com</a></p>
+                <p class="footerText">Address: <a href="#">Awasnagar, Pokhara, 33700</a></p>
+            </div>
+            <div class="footerMid">
+                <p class="headText">Usefull links</p>
+                <p class="footerText"><a href="#hero">Home</a></p>
+                <p class="footerText"><a href="#marketplace">MarketPlace</a></p>
+                <p class="footerText"><a href="#aboutus">AboutUs</a></p>
+                <p class="footerText"><a href="">Other Breeds</a></p>
+                <p class="footerText"><a href="">Sell Poms</a></p>
+                <p class="footerText"><a href="">Join Us</a></p>
+            </div>
+            <div class="footerRight">
+                <p class="headText">Give Us Feedback:</p>
+                <form action="">
+                    <input type="text" name="name" placeholder="Enter your Full Name">
+                    <input type="email" name="email" placeholder="Enter your valid Email">
+                    <textarea name="message" id="message" cols="20" rows="8" placeholder="Enter your Message"></textarea>
+                    <div class="submitBtn">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+<script>
+    let loveBtn = document.querySelectorAll('.bxs-heart');
+    loveBtn.forEach(btn=>{
+        btn.onclick = ()=>{
+            btn.classList.toggle('loved');
+        }
+    })
+</script>
+</html>

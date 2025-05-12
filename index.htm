@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PomPalace</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="icon" href="./pompalace.png" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Splidecss -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+  </head>
+  <body>
+    <div class="alertCard" id="alertCard" style="display: none">
+      <article>
+        <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+          ></path>
+        </svg>
+        <p id="alertContent">
+          Lorem ipsum dolor sit amet, consectetur<br />
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </article>
+    </div>
+    <nav>
+      <div class="logo"><img src="./pompalace.png" alt /></div>
+      <ul id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#contactus">Contact Us</a></li>
+        <li id="close" onclick="closeMenu()">Close</li>
+      </ul>
+      <div style="display: flex; gap: 10px">
+        <strong onclick="openMenu()" class="menu" id="menu"
+          ><i class="bx bx-menu"></i
+        ></strong>
+        <button class="btn" onclick="displayNotices()">
+          <i class="bx bxs-bell"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- <div id="noticeContainer"></div> -->
+
+    <!-- <section class="noticeBox">
+      <div class="notice">
+        <h3>
+          <strong>Notice Heading or Title</strong
+          ><i class="bx bx-x" onclick="closeNoticeBox(this)"></i>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          facere distinctio non porro ratione cumque, ex soluta numquam officia
+          ad quo unde enim? Ut assumenda rerum ipsa aperiam harum distinctio!
+        </p>
+        <div class="noticeImages">
+          <img src="./pomerian1.jpg" alt="" />
+        </div>
+        <div class="noticeClose">
+          <button class="btn2" onclick="closeNoticeBox(this)">
+            <strong> Okay <i class="bx bx-check"></i></strong>
+          </button>
+        </div>
+      </div>
+    </section> -->
+    <section class="hero" id="hero">
+      <div class="heroInfo">
+        <h1>
+          Welcome TO <br />
+          POM<span>PALACE</span><br />
+          NEPAL
+        </h1>
+        <p class="txt">Your One-Stop Palace for Pomeranian Companionship</p>
+        <div class="heroBtn">
+          <button onclick="openServiceModal('market')" class="btn2">
+            <strong>Find a Pom <i class="bx bxs-chevrons-right"></i></strong>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="aboutus">
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">About <strong>Us</strong></h2>
+      </div>
+      <div class="aboutContent">
+        <div class="img">
+          <img src="./dogs.png" alt="happy dogs" />
+        </div>
+        <div class="aboutText">
+          <p class="txtdes">
+            Welcome to PomPalace, where our passion for Pomeranians brings joy
+            to families everywhere. We are dedicated to raising healthy, happy
+            Pomeranian puppies with the highest standards of care and love. Our
+            mission is to connect these delightful pups with loving homes where
+            they can thrive as cherished companions. <br />
+            <br />
+            At PomPalace, we treat each Pomeranian like family. Our expert team
+            ensures that every puppy is well-socialized, healthy, and ready to
+            become your loyal friend. We are committed to transparency, quality,
+            and ethical breeding practices, offering you not only an adorable
+            puppy but also the confidence of a trustworthy source.
+            <br />
+            <br />We believe in making the process of finding your furry family
+            member as easy and enjoyable as possible. Whether you're a
+            first-time pet parent or an experienced dog lover, we're here to
+            guide you every step of the way, ensuring you and your new
+            Pomeranian have a wonderful journey together.
+          </p>
+        </div>
+      </div>
+      <p class="punchtext">
+        “Join our growing PomPalace family today—where happiness comes on four
+        paws!”
+      </p>
+    </section>
+    <div class="quote">
+      <div class="quoteBox">
+        <h1><i class="bx bxs-quote-right"></i></h1>
+        <article>
+          "The only creatures that are evolved enough to convey pure love are
+          dogs and infants, and Pomeranians do it best."
+        </article>
+        <aside>Johnny Depp</aside>
+      </div>
+    </div>
+
+    <!-- Services Modal -->
+
+    <section id="service-modal">
+      <div id="stud-box" style="display: none">
+        <h3 class="modal-head">
+          <strong onclick="closeServiceModal()"
+            ><i class="bx bx-chevron-left"></i> Back</strong
+          >
+          <strong onclick="toggleService('market')"
+            >MarketPlace <i class="bx bx-chevron-right"></i
+          ></strong>
+        </h3>
+        <div class="stud-profile">
+          <img src="./assets/ice.jpg" alt=" Mr.Ice" />
+          <article>
+            <h2 class="aboutHeading heading">Mr. <strong>Ice</strong></h2>
+            <hr />
+            <p>
+              Meet Mr. Ice – a top-quality Toy Pomeranian with charm as cool as
+              his name. Imported from India, Mr. Ice boasts a luxurious double
+              coat, compact build, and a spirited personality. With his playful
+              nature and striking appearance, he’s not just a pet — he’s a
+              statement of elegance and companionship.
+            </p>
+            <div class="stud-details">
+              <div class="detail-card">
+                <i class="bx bxs-dog"></i>
+                <aside>
+                  <p>Face</p>
+                  <h3><strong>Doll Face</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class="bx bx-move"></i>
+                <aside>
+                  <p>Size</p>
+                  <h3><strong>Toy-sized</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class="bx bxs-crown"></i>
+                <aside>
+                  <p>Coat Type</p>
+                  <h3><strong> Fluffy, Double Coat</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class="bx bxs-ruler"></i>
+                <aside>
+                  <p>Fur Length</p>
+                  <h3><strong>Long</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class="bx bx-bone"></i>
+                <aside>
+                  <p>Activity Level</p>
+                  <h3><strong>Energetic</strong></h3>
+                </aside>
+              </div>
+              <div class="detail-card">
+                <i class="bx bx-heart-circle"></i>
+                <aside>
+                  <p>Personality</p>
+                  <h3><strong>Playful, Alert, Loyal</strong></h3>
+                </aside>
+              </div>
+            </div>
+            <hr />
+            <button class="btn" onclick="bookStud()">Book Now</button>
+          </article>
+        </div>
+        <div id="image-carousel" class="splide" aria-label="Beautiful Images">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="./assets/ice1.jpeg" alt />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/ice2.jpeg" alt />
+              </li>
+              <li class="splide__slide">
+                <img src="./assets/ice3.jpeg" alt />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="market" style="display: none">
+        <div id="confirmModal" class="modal">
+          <div class="modalContent">
+            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"
+              ></path>
+            </svg>
+            <br />
+            <h2 class="aboutHeading heading" style="font-size: 2rem">
+              Confirm Booking ?
+            </h2>
+            <p id="confirmText"></p>
+            <div class="modalActions">
+              <button class="btn" id="confirmBtn">Confirm</button>
+              <button class="btn2" onclick="closeModal()">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="modal-head">
+          <strong onclick="toggleService('stud-box')"
+            ><i class="bx bx-chevron-left"></i> Stud Service</strong
+          >
+          <strong onclick="closeServiceModal()"
+            >Back <i class="bx bx-chevron-right"></i
+          ></strong>
+        </h3>
+        <div style="display: flex; justify-content: center">
+          <h2 class="aboutHeading heading">Market <strong>Place</strong></h2>
+        </div>
+        <div style="display: none; justify-content: center" id="loadingSpinner">
+          <img src="./assets/spinner.gif" alt="loading" style="width: 150px" />
+        </div>
+        <div class="cardContainer" id="dogsContainer">
+          <!-- <div class="card">
+            <img
+              src="https://rockykanaka.com/wp-content/uploads/2023/11/image-87-768x768.jpeg"
+              alt="cardImage"
+            />
+            <div class="cardTitle">
+              <p>Blue Merle</p>
+              <div class="status">Available</div>
+            </div>
+            <h3>NPR 100000</h3>
+            <div class="cardDescription">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Repellendus minus, provident temporibus voluptatibus animi aut!
+              Sit recusandae sunt blanditiis maiores sint. Doloribus tenetur,
+              temporibus ratione earum perferendis corporis amet neque
+              distinctio impedit aut ipsa eos molestias id dicta labore vero.
+            </div>
+            <div class="cardFooter">
+              <button class="btn">Book now</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">Our <strong>Services</strong></h2>
+      </div>
+
+      <div class="servicesContent">
+        <div class="service studService">
+          <p class="headText">Stud Service</p>
+          <div class="serviceImg">
+            <img src="./assets/ice.jpg" alt="stud image" />
+            <article class="hoverSection">
+              <p>
+                PomPalace Nepal offers premium stud services with top-quality,
+                purebred Pomeranian males. Our studs are healthy, certified, and
+                selected for superior traits — ensuring the best breeding
+                results for your female Poms.
+              </p>
+              <div class="serviceLink">
+                <span onclick="openServiceModal('stud-box')">
+                  <i class="bx bx-link-external"></i>
+                </span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="service marketplace">
+          <p class="headText">MarketPlace</p>
+          <div class="serviceImg">
+            <img
+              src="https://th.bing.com/th/id/R.191f52d09e3437fd24e8a490f7163ae1?rik=%2b8J%2fcjZ4J8FJjA&pid=ImgRaw&r=0"
+              alt="stud image"
+            />
+            <article class="hoverSection">
+              <p>
+                Our marketplace features exclusive, homebred Toy Pomeranian
+                puppies raised with care and quality. At PomPalace, we don’t
+                just list dogs — we raise and sell our own, ensuring each puppy
+                meets our high standards before reaching your home.
+              </p>
+              <div class="serviceLink">
+                <span onclick="openServiceModal('market')">
+                  <i class="bx bx-link-external"></i
+                ></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pomColors">
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">POM <strong>Colors</strong></h2>
+      </div>
+
+      <div class="wrapper" style="--noi: 7">
+        <div class="slider">
+          <div class="item" style="--pos: 0">
+            <img src="./poms/snowwhite.jpeg" alt="snowwhite" />
+
+            <h3>Snow White</h3>
+          </div>
+          <div class="item" style="--pos: 1">
+            <img src="./poms/black.jpeg" alt="snowwhite" />
+
+            <h3>Black</h3>
+          </div>
+          <div class="item" style="--pos: 2">
+            <img src="./poms/blackntan.jpeg" alt="snowwhite" />
+
+            <h3>Black and Tan</h3>
+          </div>
+          <div class="item" style="--pos: 3">
+            <img src="./poms/chocolate.jpeg" alt="snowwhite" />
+
+            <h3>Chocolate</h3>
+          </div>
+          <div class="item" style="--pos: 4">
+            <img src="./poms/golden.jpeg" alt="snowwhite" />
+
+            <h3>Golden</h3>
+          </div>
+          <div class="item" style="--pos: 5">
+            <img src="./poms/offwhite.jpeg" alt="snowwhite" />
+
+            <h3>Off White</h3>
+          </div>
+          <div class="item" style="--pos: 6">
+            <img src="./poms/parti.jpeg" alt="snowwhite" />
+
+            <h3>Party POM</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote">
+      <div class="quoteBox">
+        <h1><i class="bx bxs-quote-right"></i></h1>
+        <article>"Happiness is a warm Pomeranian."</article>
+        <aside>Charles M. Schulz</aside>
+      </div>
+    </div>
+
+    <section class="whyPoms">
+      <div style="display: flex; justify-content: center">
+        <h2 class="aboutHeading heading">WHY <strong>Pomeranians?</strong></h2>
+      </div>
+      <div>
+        <div class="leftContent">
+          <img class="whyPomImg" src="./Zoom Out.png" alt="WhyPoms?" />
+          <article class="whyPomArticle">
+            <b>Big Personality in a Small Package</b>
+            <p>
+              Pomeranians are known for their lively and charismatic
+              personalities. Despite their small size, they are full of energy,
+              confidence, and charm, making them fantastic companions that
+              brighten any home.
+            </p>
+          </article>
+        </div>
+        <div class="rightContent">
+          <div class="leftContent">
+            <img class="whyPomImg" src="./Easy.png" alt="WhyPoms?" />
+            <article class="whyPomArticle">
+              <b>Intelligent and Easy to Train</b>
+              <p>
+                Pomeranians are very intelligent dogs, making training a fun and
+                rewarding experience. They learn new commands quickly, and their
+                eagerness to please means they excel in obedience training and
+                even fun tricks.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="leftContent">
+          <img class="whyPomImg" src="./Loyalty.png" alt="WhyPoms?" />
+          <article class="whyPomArticle">
+            <b>Loyal Companions</b>
+            <p>
+              Pomeranians form strong bonds with their owners. They are
+              affectionate and love to be part of family activities, always
+              eager to snuggle up or follow you around. Their loyalty makes them
+              wonderful lifelong companions.
+            </p>
+          </article>
+        </div>
+        <div class="rightContent">
+          <div class="leftContent">
+            <img class="whyPomImg" src="./Weather.png" alt="WhyPoms?" />
+            <article class="whyPomArticle">
+              <b>Adaptable for Any Lifestyle</b>
+              <p>
+                Whether you live in a cozy apartment or a larger home,
+                Pomeranians adapt well to different living situations. Their
+                small size and moderate exercise needs mean they can thrive in
+                urban environments, while their playful energy makes them happy
+                in more spacious homes too.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="contactus">
+      <div class="footer">
+        <div class="footerLeft">
+          <img
+            src="./pompalace.png"
+            alt="Footer Logo"
+            class="footerLogo"
+          /><br />
+          <p class="headText">POMPALACE</p>
+          <div class="social">
+            <a href="mailto:pompalacenepal@gmail.com" target="_blank"
+              ><i class="bx bxl-gmail"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574521245434"
+              target="_blank"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@pom.palace.nepal?_t=ZS-8vmzFH1wS9A&_r=1"
+              target="_blank"
+              ><i class="bx bxl-tiktok"></i
+            ></a>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.instagram.com/pompalacenepal?igsh=MXBwcmduYXI3ZmlldA=="
+              target="_blank"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+            <a
+              href="https://wa.me/9769461814?text=Hello Pompalace Nepal"
+              target="_blank"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
+            <a href="https://maps.app.goo.gl/wVG9jGQ9RxWSRosVA" target="_blank"
+              ><i class="bx bxs-map"></i
+            ></a>
+          </div>
+          <p class="footerText">Contact: <a href="#"> +977 976-9461814</a></p>
+          <p class="footerText">
+            Mail:
+            <a href="mailto:pompalacenepal@gmail.com"
+              >pompalacenepal@gmail.com</a
+            >
+          </p>
+          <p class="footerText">
+            Address:
+            <a href="https://maps.app.goo.gl/wVG9jGQ9RxWSRosVA"
+              >Awasnagar, Pokhara, 33700</a
+            >
+          </p>
+        </div>
+        <div class="footerMid">
+          <p class="headText">Usefull links</p>
+          <p class="footerText"><a href="#hero">Home</a></p>
+          <p class="footerText"><a href="#services">Services</a></p>
+          <p class="footerText"><a href="#aboutus">AboutUs</a></p>
+          <p class="footerText"><a aria-disabled="true">Other Breeds</a></p>
+          <p class="footerText"><a aria-disabled="true">Sell Poms</a></p>
+          <p class="footerText"><a aria-disabled="true">Join Us</a></p>
+        </div>
+        <div class="footerRight">
+          <p class="headText">Give Us Feedback:</p>
+          <form action>
+            <input type="text" name="name" placeholder="Enter your Full Name" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your valid Email"
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="20"
+              rows="8"
+              placeholder="Enter your Message"
+            ></textarea>
+            <div class="submitBtn">
+              <button disabled type="submit" class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    const baseURL = "http://127.0.0.1:8000/api";
+  </script>
+  <script>
+    let menu = document.getElementById("menu");
+    function openMenu() {
+      document.getElementById("navLinks").style.transform =
+        "translate(-50%, 0%)";
+      document.getElementById("close").textContent === "Close";
+    }
+    function closeMenu() {
+      document.getElementById("navLinks").style.transform =
+        "translate(-50%,-100%)";
+      document.getElementById("close").textContent === "open";
+    }
+  </script>
+
+  <script>
+    //scripts to handle services toggle
+  </script>
+  <script>
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll("nav li a");
+    let navbar = document.querySelector("nav");
+
+    window.onscroll = () => {
+      sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            document
+              .querySelector("nav a[href*=" + id + "]")
+              .classList.add("active");
+          });
+        }
+      });
+      // if(document.getElementById('close').textContent === 'Close'){
+      //     document.getElementById('navLinks').style.transform = 'translate(-50%,-100%)'
+      // }
+    };
+  </script>
+
+  <script>
+    let studModal = document.getElementById("service-modal");
+    function openServiceModal(e) {
+      let scrollPosition = window.scrollY;
+      studModal.style.top = scrollPosition + 8 + "px";
+      studModal.style.display = "block";
+      document.getElementById(e).style.display = "block";
+
+      document.body.style.overflow = "hidden";
+      if (e !== "market") {
+        document.getElementById("market").style.display = "none";
+      } else {
+        document.getElementById("stud-box").style.display = "none";
+      }
+    }
+
+    function toggleService(e) {
+      if (e == "market") {
+        document.getElementById("stud-box").style.display = "none";
+        document.getElementById("market").style.display = "block";
+      } else {
+        document.getElementById("stud-box").style.display = "block";
+        document.getElementById("market").style.display = "none";
+      }
+    }
+
+    function closeServiceModal() {
+      document.body.style.overflow = "auto";
+      studModal.style.display = "none";
+    }
+
+    function closeNoticeBox(e) {
+      e.parentElement.parentElement.parentElement.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    function displayNotices() {
+      let notices = document.querySelectorAll(".noticeBox");
+      if (notices.length > 0) {
+        notices.forEach((notice) => (notice.style.display = "flex"));
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        document.body.style.overflow = "hidden";
+      } else {
+        document.getElementById("alertContent").textContent =
+          "No Notices to Display";
+
+        document.getElementById("alertCard").style.display = "flex";
+
+        setTimeout(() => {
+          document.getElementById("alertCard").style.display = "none";
+        }, 3000);
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      var splide = new Splide("#image-carousel", {
+        arrows: true, // Hide navigation arrows
+        pagination: true, // Hide pagination dots
+        drag: true,
+        rewind: true, // Disable manual dragging
+      }).mount();
+
+      // Auto-scroll function
+      setInterval(function () {
+        splide.go("+1"); // Moves to the next slide smoothly
+      }, 5000); // Adjust speed (lower = faster scrolling)
+
+      // load notices from server
+      try {
+        let response = await fetch(baseURL + "/notices");
+        const data = await response.json();
+        if (data && data.status) {
+          if (data.data.length > 0) {
+            data.data.forEach((notice) => {
+              //   console.log(notice);
+              let noticeContainer = document.createElement("section");
+              noticeContainer.classList.add("noticeBox");
+              let noticeContent = document.createElement("div");
+              noticeContent.classList.add("notice");
+              noticeContent.innerHTML = `
+                            <h3>
+                                <strong>${notice.title}</strong><i class="bx bx-x" onclick="closeNoticeBox(this)"></i>
+                            </h3>
+                            <p>
+                                ${notice.description}
+                            </p>
+                    
+                            <div class="noticeClose">
+                                <button class="btn2" onclick="closeNoticeBox(this)">
+                                    <strong> Okay <i class="bx bx-check"></i></strong>
+                                </button>
+                            </div>
+                        
+                    `;
+
+              if (notice.imagePath) {
+                const lastChild = noticeContent.lastElementChild;
+
+                // Insert newChild before the last child
+
+                let noticeImage = document.createElement("div");
+                noticeImage.classList.add("noticeImages");
+                noticeImage.innerHTML = `<img src="${notice.imagePath}" alt="" /> `;
+
+                noticeContent.insertBefore(noticeImage, lastChild);
+              }
+              noticeContainer.appendChild(noticeContent);
+              document.body.appendChild(noticeContainer);
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              document.body.style.overflow = "hidden";
+            });
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  </script>
+
+  <script>
+    let dogs = [];
+
+    document.addEventListener("DOMContentLoaded", async function () {
+      document.getElementById("loadingSpinner").style.display = "flex";
+      let dogContainer = document.getElementById("dogsContainer");
+
+      try {
+        let response = await fetch(baseURL + "/alldogs");
+        const data = await response.json();
+        if (data && data.status) {
+          dogs = data.data;
+          console.log(dogs);
+        } else {
+          console.error("Error:", data.message);
+        }
+
+        
+
+        if (dogs.length > 0) {
+          
+
+          dogs.forEach((d) => {
+            let dogcard = document.createElement("div");
+            dogcard.classList.add("card");
+
+            dogcard.innerHTML = `
+
+            <img src=${d.profile_img} alt="cardImage" />
+                <div class="cardTitle">
+                  <p class="dogName">${d.name}</p>
+                  <div class="status" style ="${
+                    d.available == 0
+                      ? "background-color: rgb(221, 92, 72); color: red;"
+                      : ""
+                  }">${d.available == 1 ? "Available" : "Sold Out"}</div>
+                </div>
+                <h3 class="dogPrice">NPR ${d.price}</h3>
+                <p class="cardDescription">
+                  ${d.description}
+                </p>
+                <div class="cardFooter">
+                  <button class="btn" onclick="showConfirmation(this)">Book now</button>
+                </div>
+          
+          `;
+            dogContainer.appendChild(dogcard);
+          });
+          return;
+        } 
+      } catch (error) {
+        
+        
+        console.error("Error", error);
+      }
+
+      document.getElementById("alertContent").textContent =
+            "No Dogs To Display.";
+
+          document.getElementById("alertCard").style.display = "flex";
+
+          setTimeout(() => {
+            document.getElementById("alertCard").style.display = "none";
+          }, 3000);
+        document.getElementById("loadingSpinner").style.display = "none";
+
+      let messageContent = document.createElement('p')
+          messageContent.style.width = '100%'
+          messageContent.style.textAlign = 'center'
+          messageContent.innerHTML = "No Dogs for Sell."
+          messageContent.style.color = 'red'
+          dogContainer.appendChild(messageContent)
+
+      // console.log(data);
+
+      // document.getElementById("loadingSpinner").style.display = "none";
+    });
+
+    let selectedDog = {
+      selected: false,
+      message: null,
+    };
+    function sendToWhatsApp(button) {}
+
+    function closeModal() {
+      document.getElementById("confirmModal").style.display = "none";
+    }
+
+    function showConfirmation(button) {
+      let card = button.parentElement.parentElement;
+      let imageurl = card.querySelector("img").getAttribute("src");
+      let name = card.querySelector(".dogName").innerText;
+
+      let price = card.querySelector(".dogPrice").innerText;
+      let description = card.querySelector(".cardDescription").innerText;
+
+      let message =
+        `*New Booking Request*%0A` +
+        `*Dog Name:* ${name}%0A` +
+        `*Price:* ${price}%0A` +
+        `*Description:* ${description}%0A` +
+        `*Image URL:* ${imageurl}`;
+
+      let phone = "9769461814";
+      let url = `https://wa.me/${phone}?text=${message}`;
+
+      selectedDog = {
+        selected: true,
+        message: message,
+        phone: phone,
+        url: url,
+      };
+      document.getElementById("confirmModal").style.display = "flex";
+    }
+
+    document
+      .getElementById("confirmBtn")
+      .addEventListener("click", function () {
+        if (!selectedDog.selected) {
+          console.log("no dogs selected");
+          return;
+        }
+
+        console.log(selectedDog);
+
+        window.open(selectedDog.url, "_blank");
+        closeModal();
+
+        document.getElementById("alertContent").textContent =
+          "Order Placed Successfully!";
+
+        document.getElementById("alertCard").style.display = "flex";
+
+        setTimeout(() => {
+          document.getElementById("alertCard").style.display = "none";
+        }, 3000);
+      });
+
+    function bookStud() {
+      let message = `*Stud Booking Request*%0A` + `*Dog Name:* Mr.Ice%0A`;
+
+      let phone = "9769461814";
+      let url = `https://wa.me/${phone}?text=${message}`;
+
+      window.open(url, "_blank");
+    }
+  </script>
+</html>

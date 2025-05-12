@@ -1,0 +1,174 @@
+.navHeading{
+    position: relative;
+    display: inline-block;
+}
+
+.navHeading::after{
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom:-4px;
+    width: 10%;
+    height: 4px;
+    border-radius: 5px;
+    background: linear-gradient(to right,#3063FF, #C325D1, #A92FFF);
+
+}
+.navHeading::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-4px;
+    width: 40%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+.controls{
+    display: flex;
+    margin: 1rem 2rem;
+    padding: 0.7rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(77, 3, 70, 0.445);
+    border-radius: 30px;
+    background-color: var(--bgcolor);
+}
+.controls form, .controls .leftBtn{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.primaryText{
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.secondaryText{
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+.controlForm select{
+    padding: 5px 8px;
+    border-radius: 13px;
+}
+
+/*cards*/
+
+.cards{
+    display: grid;
+    padding: 0.2rem 1.5rem  0.7rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); Responsive columns */
+    grid-gap: 15px;
+}
+.cards .card{
+    overflow: hidden;
+    background-color: var(--bgcolor);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(77, 3, 70, 0.445);
+}
+.card .cardHead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0.75rem 0rem;
+}
+.cardAction{
+    padding: 0.25rem 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(65, 11, 11);
+}
+.loved{
+    color: red;
+    text-shadow: 0 0 3px var(--secondary-color);
+}
+.cardAction i{
+    font-size: 2.5rem;
+    transition: 0.5s ease-in;
+}
+
+.cardAction div{
+    text-align: right;
+}
+.actionBtn{
+    padding: 0.25rem 0;
+    display: flex;
+    justify-content: end;
+}
+.status{
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 12px;
+    color: green;
+    background-color: rgb(142, 209, 142);
+}
+.notAvailable{
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 12px;
+    color: rgb(133, 12, 12);
+    background-color: rgb(218, 144, 144);
+}
+
+@media (max-width: 915px) {
+    .controls{
+        display: block;
+    }
+    .controlForm{
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+    .controls .leftBtn{
+        margin-top:7px;
+        justify-content: space-between;
+    }   
+}
+@media (max-width: 625px){
+    .primaryText{
+        font-size: 0.9rem;
+    }
+    .secondaryText{
+        font-size: 0.8rem;
+    }
+    .controlForm select{
+        padding: 3px 5px;
+        font-size: 0.8rem;
+    }
+    .controls{
+        margin: 1rem 1.2rem;
+    }
+    .cards{
+        padding: 0.2rem 1.2rem  0.7rem;
+    }
+}
+@media (max-width: 625px){
+    .primaryText{
+        font-size: 0.8rem;
+    }
+    .secondaryText{
+        font-size: 0.7rem;
+    }
+    .controlForm select{
+        width:100%;
+        padding: 3px 8px;
+        font-size: 0.8rem;
+    }
+    .controls{
+        margin: 0.8rem 0.7rem;
+    }
+    .cards{
+        padding: 0.2rem 0.7rem  0.7rem;
+    }
+    .navHeading{
+        font-size: 0.8rem;
+    }
+    .status, .notAvailable{
+        font-size: 0.65rem;
+    }
+}
