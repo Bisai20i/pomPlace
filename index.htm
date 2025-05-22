@@ -308,6 +308,7 @@
                 </span>
               </div>
             </article>
+            <i class='bx  bx-chevron-up' style="position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-size: 3rem; text-shadow: 0 0 5px purple; z-index: 1;"></i> 
           </div>
         </div>
         <div class="service marketplace">
@@ -330,6 +331,7 @@
                 ></span>
               </div>
             </article>
+            <i class='bx  bx-chevron-up' style="position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); font-size: 3rem; text-shadow: 0 0 5px purple; z-index: 1;"></i> 
           </div>
         </div>
       </div>
@@ -586,7 +588,7 @@
     let studModal = document.getElementById("service-modal");
     function openServiceModal(e) {
       let scrollPosition = window.scrollY;
-      studModal.style.top = scrollPosition + 8 + "px";
+      studModal.style.top = scrollPosition + "px";
       studModal.style.display = "block";
       document.getElementById(e).style.display = "block";
 
@@ -749,9 +751,10 @@
                   <button class="btn" onclick="showConfirmation(this)">Book now</button>
                 </div>
           
-          `;
+            `;
             dogContainer.appendChild(dogcard);
           });
+          document.getElementById("loadingSpinner").style.display = "none";
           return;
         } 
       } catch (error) {
